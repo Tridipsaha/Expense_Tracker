@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="Home.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <nav class="container">
+        <div class="options">
+            <button id="optionsBtn" onclick="toggleOptions()">⋮</button>
+            <div class="options-content" id="optionsContent">
+                <button onclick="navigate('home')">Home</button>
+                <button onclick="navigate('edit')">Edit</button>
+                <button onclick="saveFile()">Save File</button>
+                <button onclick="toggleLogin()">Login/Logout</button>
+            </div>
+        </div>
+
+        <h1>Expense Tracker</h1>
+
+        <div class="balance">
+            <h2>Balance: <span id="balance">0.00</span></h2>
+        </div>
+
+        <!-- Add the oninput attribute to provide live updates -->
+        <div class="balance-input">
+            <label for="updateBalance">Update Balance:</label>
+            <input type="number" id="updateBalance" placeholder="Enter new balance" oninput="updateLiveBalance()">
+            <button onclick="updateBalanceFromInput()">Update</button>
+        </div>
+
+    </nav>
+
+    <div class="content-container">
+        <div class="form">
+            <label for="expenseName">Expense Name:</label>
+            <input type="text" id="expenseName" placeholder="Enter expense name">
+            <label for="expenseAmount">Amount:</label>
+            <input type="number" id="expenseAmount" placeholder="Enter amount">
+            <button onclick="addExpense()">Add Expense</button>
+        </div>
+
+        <div class="expenses">
+            <h3>Expenses</h3>
+            <ul id="expenseList"></ul>
+        </div>
+    </div>
+    <canvas id="expenseChart" width="200" height="200"></canvas>
+
+    <script src="Home.js"></script>
+
+</body>
+
+</html>

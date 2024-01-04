@@ -1,0 +1,121 @@
+.options {
+  position: relative;
+  display: inline-block;
+}
+
+#optionsBtn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.options-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.options-content button {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.options-content button:hover {
+  background-color: #ddd;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #800080;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 2px solid #fff;
+}
+
+h1 {
+  margin: 0;
+}
+
+/* Add the following styles for the balance input form */
+.balance-input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.balance-input label {
+  margin-right: 5px;
+}
+
+.balance-input input {
+  margin-right: 10px;
+}
+
+/* Add or update the following styles for the canvas */
+#expenseChart {
+  max-width: 100%;
+  width: 200px; /* Set the desired width */
+  height: 200px; /* Set the desired height */
+  margin: 20px 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column; /* Adjusted to column layout */
+  padding: 20px;
+}
+
+.form {
+  margin-bottom: 20px; /* Added margin to create space between form and expenses */
+}
+
+.expenses {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.expenses h3 {
+  color: #333;
+}
+
+.expenses ul {
+  list-style: none;
+  padding: 0;
+}
+
+.expenses li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.expenses li:last-child {
+  border-bottom: none;
+}
+
+.expenses button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.expenses button:hover {
+  background-color: #45a049;
+}
